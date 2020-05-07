@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Saylani Home</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+	<style>
+		body{
+			margin-right:0; margin-left:0;
+		}
+		.btn1 {
+			display: inline-block;
+			width: 47px;
+			height: 40px;
+			background-color: #f1f1f1;
+			margin-left: 10px;
+			border-radius: 37%;
+			box-shadow: 0 5px 15px -5px #00000070;
+			color: #3498db;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.btn1 i {
+			line-height: 40px;
+			font-size: 24px;
+			transition: 0.2s linear;
+
+		}
+
+		.btn1:hover i {
+			transform: scale(1.3);
+			color: #f1f1f1;
+		}
+
+		.btn1::before {
+			content: "";
+			position: absolute;
+			width: 120%;
+			height: 120%;
+			background: #3498db;
+			transform: rotate(45deg);
+			left: -110%;
+			top: 90%;
+
+		}
+
+		.btn1:hover::before {
+			animation: aaa 0.7s 1;
+			top: -10%;
+			left: -10%;
+
+		}
+
+		/*FOR TEXT SLIDING*/
+		.intro
+		{
+			width: 100%;
+		}
+
+		.intro{
+			animation: right_to_left 8s ease;
+		}
+
+		@keyframes right_to_left {
+			from {
+				margin-left: 100%;
+			}
+
+			to {
+				margin-left: 0;
+			}
+		}
+
+		.polaroid
+		{
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+	</style>
+	<script>
+		function changeButtonClass(element) {
+			var elements = document.getElementsByClassName("navBtn");
+			for (i = 0; i < elements.length; i++) {
+				elements[i].classList.remove('btn-primary');
+			}
+
+			element.classList.add("btn-primary");
+		}
+	</script>
+</head>
+
+<body>
+
+	<div class="row" style="background-color: rgb(49,109,195); color:white;padding-top: 12px; margin-right:0; margin-left:0; text-align: center;">
+
+		<div class=" col-md-4" style="text-align:center">
+			<a class="btn1" href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+			<a class="btn1" href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+			<a class="btn1" href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+			<a class="btn1" href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+		</div>
+
+		<div class=" col-md-5" style="padding-top: 6px;">
+			<p>Millions of people's life has changed, millions more awaiting your donation</p>
+		</div>
+
+		<div class=" col-md-3" style="padding-top:5px">
+			<button style="font-size:12px">UK DONOR</button>
+			<button style="font-size:12px">Donate Now</button>
+			<button style="font-size:12px">SMIT Result</button>
+		</div>
+		<br><br>
+	</div>
+
+	<div class="row " style="background-color: rgb(247,248,250); padding: 10px; margin-right:0; margin-left:0; text-align: center;">
+
+		<div class=" col-md-4" >
+			<img src="images/SaylaniLogo.png" alt="Saylani Logo" height="50px">
+		</div>
+
+		<div class=" col-md-7" style="padding-top: 10px;">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary navBtn" onclick="changeButtonClass(this);">Home</button>
+				<div class="btn-group">
+					<button type="button" class="btn  dropdown-toggle navBtn" data-toggle="dropdown"
+						onclick="changeButtonClass(this);">
+						About
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Introduction</a>
+						<a class="dropdown-item" href="#">Chairman Message</a>
+						<a class="dropdown-item" href="#">Saylani Annual Report</a>
+					</div>
+				</div>
+				<div class="btn-group">
+					<button type="button" class="btn  dropdown-toggle navBtn" data-toggle="dropdown"
+						onclick="changeButtonClass(this);">
+						Saylani Services
+					</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Education</a>
+						<a class="dropdown-item" href="#">Medical</a>
+						<a class="dropdown-item" href="#">Welfare</a>
+						<a class="dropdown-item" href="#">Hajj Application Form</a>
+						<a class="dropdown-item" href="#">Saylani Dastarkhwan</a>
+						<a class="dropdown-item" href="#">Saylani RO Plant</a>
+						<a class="dropdown-item" href="#">Online Sadaqah</a>
+						<a class="dropdown-item" href="#">Online Taweezat/Istekhara</a>
+						<a class="dropdown-item" href="#">Saylani Job Bank</a>
+						<a class="dropdown-item" href="#">Online Quran Academy</a>
+						<a class="dropdown-item" href="#">Books</a>
+						<a class="dropdown-item" href="#">Saylani Online Masajid</a>
+					</div>
+				</div>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn  dropdown-toggle navBtn" data-toggle="dropdown"
+					onclick="changeButtonClass(this);">
+					Future Projects
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Saylani University</a>
+					<a class="dropdown-item" href="#">Saylani City</a>
+				</div>
+			</div>
+			<button type="button" class="btn navBtn" onclick="changeButtonClass(this);">Media</button>
+			<button type="button" class="btn navBtn" onclick="changeButtonClass(this);">News</button>
+			<div class="btn-group">
+				<button type="button" class="btn  dropdown-toggle navBtn" data-toggle="dropdown"
+					onclick="changeButtonClass(this);">
+					Donation
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Bank Details</a>
+					<a class="dropdown-item" href="#">Sadqa</a>
+					<a class="dropdown-item" href="#">Aqiqa</a>
+					<a class="dropdown-item" href="#">Other Donation</a>
+					<a class="dropdown-item" href="#">Corona Effecties</a>
+					<a class="dropdown-item" href="#">Ramzan - 2020</a>
+					<a class="dropdown-item" href="#">Contact Us</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="demo" class="carousel slide" data-ride="carousel" data-interval="5000" style="margin-right:0; margin-left:0;">
+
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+
+		<div class="carousel-inner">
+
+			<div class="carousel-item active">
+				<img src="https://www.saylaniwelfare.com/public_html/images/saylani/Banner.jpeg"
+					style="width:100%; height:500px;" />
+			</div>
+
+			<div class="carousel-item">
+				<img src="https://www.saylaniwelfare.com/public_html/images/saylani/Corona Banner.jpeg"
+					style="width:100%; height:500px;" />
+			</div>
+
+			<div class="carousel-item">
+				<img src="https://www.saylaniwelfare.com/public_html/images/saylani/BloodBank_Slider.jpg"
+					style="width:100%; height:500px;" />
+			</div>
+
+		</div>
+
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span></a>
+
+
+
+	</div>
+
+	<div style="margin-top: 10px; margin-right:0; margin-left:0;">
+		<marquee direction="left" style="background-color:rgb(49,109,195); color:white; font-size:16px;  padding:2px;">
+			(News-1) PIAIC Next Phase Admission in Islamabad And Faisalabad" .
+			<a href="#" style="color:white">More Details</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			(News-2) Alhamdulillah Saylani Organized 200+ Locations For Iftar And Sehri In This Holy Month .
+			<a href="#" style="color:white">More Details</a>
+		</marquee>
+	</div>
+
+	<div  style="background-color: rgb(247,248,250); margin-top:8px; width:100%; margin-right:0; margin-left:0;" class="intro">
+		<div style="text-align: center;">
+			<h1 style="font-family: Times New Roman, Times, serif;"><span style="color:rgb(49,109,195);">INTRO</span><span style="color:rgb(66,121,0)">DUCTION</span></h1>
+		</div>
+
+		<div style="text-align: center;">
+			<b><b style="color:rgb(66,121,0);">_____</b>	</b>	
+			<img src="https://www.saylaniwelfare.com/public_html/images/saylani/favicon.png" alt="">
+			<b><b style="color:rgb(66,121,0);">_____</b></b> 
+		</div>
+
+		<div class="  offset-md-2 col-md-8">
+			<p style="color:rgb(154,154,155)" >
+				Established in May 1999 by famous spiritual and religious scholar Maulana Bashir Ahmed Farooqui, Saylani Welfare International Trust was built on the fundamentals of breaking the cycle of poverty, alleviating the financial troubles of the poor, giving people a chance to live a dignified life and spreading happiness.
+			</p>
+			<br>
+			<p style="color:rgb(154,154,155)">
+				We are an organization that believes in lighting up the lives of underprivileged people across the world. We endeavor to provide the best quality services in areas including food, education, medical and social welfare free of cost to people living in the dark. With over 60 different sectors, we feed thousands of hungry people each day, hundreds more are given the hope of life through medical health care, many are educated to become leaders of tomorrow and several are given the opportunity to stand on their feet financially.
+			</p>
+			<br>
+			<p style="color:rgb(154,154,155)">
+				Today, we are proud to say that our physical presence extends throughout Pakistan with a vast network of 125 branches operating in major cities including Karachi, Lahore, Islamabad, Rawalpindi, Hyderabad and Faisalabad. Apart from Pakistan, we have overseas offices in the UK, USA and UAE as well. Our worldwide branches are operating under the guidance of a team of over 2,000 working professionals who help almost 125,000 people on a daily basis.
+			</p>
+			<br>
+			<p style="color:rgb(154,154,155)">
+				We strongly believe that a little help goes a long way and our work would not be possible without the generous support of our valuable donors. Our local and international donors have graciously lent us a hand by supporting our causes and enabling us to serve the needs of people in need.
+			</p>
+			<br><br>
+		</div>
+	</div>
+
+	<div style="background-color: rgb(39,85,233); margin-right:0; margin-left:0;">
+		<div class="row" style=" font-family: Times New Roman, Times, serif; padding-left:50px; padding-right:50px; margin-right:0; margin-left:0;">
+			<div class=" col-md-3" style="text-align: center; padding-top:50px;">
+				<img src="images/icon_food_png.png" alt="" height="50px;" width="50px;">
+				<br>
+				<h1 style="font-size:60px; color:white">125,000</h1>
+				<p style="font-size: large; color:white; font-weight:bolder;">DAILY DASTARKHWAN<span style="color:rgb(0,255,0)">(MONTHLY)</span></p>
+			</div>
+			<div class=" col-md-3" style="text-align: center; padding-top:50px;">
+				<img src="images/icon_family_png.png" alt="" height="50px;" width="50px;">
+				<br>
+				<h1 style="font-size:60px; color:white">7,500</h1>
+				<p style="font-size: large; color:white; font-weight:bolder">FAMILY ADOPTION<span style="color:rgb(0,255,0)">(MONTHLY)</span></p>
+			</div>
+			<div class=" col-md-3" style="text-align: center; padding-top:50px;">
+				<img src="images/icon_medical_png.png" alt="" height="50px;" width="50px;">
+				<br>
+				<h1 style="font-size:60px; color:white">43,749</h1>
+				<p style="font-size: large; color:white; font-weight:bolder">MEDICAL<span style="color:rgb(0,255,0)">(MONTHLY)</span></p>
+			</div>
+			<div class=" col-md-3" style="text-align: center; padding-top:50px;">
+				<img src="images/icon_education_png.png" alt="" height="50px;" width="50px;">
+				<br>
+				<h1 style="font-size:60px; color:white">180,000</h1>
+				<p style="font-size: large; color:white; font-weight:bolder">EDUCATION<span style="color:rgb(0,255,0)">(MONTHLY)</span></p>
+			</div>
+			
+		</div>
+	</div>
+
+	<div style="background-color: rgb(247,248,250); font-family: 'Times New Roman', Times, serif; margin-right:0; margin-left:0;">
+		<div style="text-align: center; padding-top:40px">
+			<h1 ><span style="color: rgb(49,109,195);">WHAT WE </span><span style="color: rgb(66,121,0);">ARE DOING</span><span style="color: red;;">?</span></h1>
+		</div>
+		<div style="text-align: center;">
+			<b><b style="color:rgb(66,121,0);">_____</b>	</b>	
+			<img src="https://www.saylaniwelfare.com/public_html/images/saylani/favicon.png" alt="" height="35px">
+			<b><b style="color:rgb(66,121,0);">_____</b></b> 
+		</div>
+
+		<div class="row" style="padding-top:10px; padding-left:60px; padding-right:60px; margin-right:0; margin-left:0;">
+			<div class=" col-md-4" style="padding:30px;">
+				<div class="polaroid" style="background-color:white; height:200px; text-align:center; padding-top:30px">
+					<img src="images/onlinesadqah.png" alt="" height="70px">
+					<p style="font-size:x-large; color:rgb(49,109,195)"><b>ONLINE SADAQAH</b></p>
+				</div>
+			</div>
+			<div class=" col-md-4" style="padding:30px;">
+				<div class="polaroid" style="background-color:white; height:200px; text-align:center; padding-top:30px">
+					<img src="images/welfare.png" alt="" height="70px">
+					<p style="font-size:x-large; color:rgb(49,109,195)"><b>WELFARE</b></p>
+				</div>
+			</div>
+			<div class=" col-md-4" style="padding:30px;">
+				<div class="polaroid" style="background-color:white; height:200px; text-align:center; padding-top:30px">
+					<img src="images/medical.png" alt="" height="70px">
+					<p style="font-size:x-large; color:rgb(49,109,195)"><b>MEDICAL</b></p>
+				</div>
+			</div>
+
+			<div class=" col-md-4" style="padding:30px;">
+				<div class="polaroid" style="background-color:white; height:200px; text-align:center; padding-top:30px">
+					<img src="images/Dastarkhwan.png" alt="" height="70px">
+					<p style="font-size:x-large; color:rgb(49,109,195); word-break: break-all;" ><b>DASTARKHWAN</b></p>
+				</div>
+			</div>
+			<div class=" col-md-4" style="padding:30px;">
+				<div class="polaroid" style="background-color:white; height:200px; text-align:center; padding-top:30px">
+					<img src="images/ROPLANT.png" alt="" height="70px">
+					<p style="font-size:x-large; color:rgb(49,109,195)"><b>RO PLANT</b></p>
+				</div>
+			</div>
+			<div class=" col-md-4" style="padding:30px;">
+				<div class="polaroid" style="background-color:white; height:200px; text-align:center; padding-top:30px">
+					<img src="images/education.png" alt="" height="70px">
+					<p style="font-size:x-large; color:rgb(49,109,195)"><b>EDUCATION</b></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="font-family: 'Times New Roman', Times, serif; margin-right:0; margin-left:0;">
+		<br>
+		<div class="row" style="margin-right:0; margin-left:0;">
+			<div class="offset-md-1  col-md-7">
+				<h3 style="color: rgb(49,109,195);"><b>MISSION AND UPCOMING PROJECTS</b></h3>
+				<div><div style="border: solid 1px rgb(66,121,0); width:10%"></div></div>
+				<br>
+
+				<div class="row" style="margin-right:0; margin-left:0;">
+					<div class=" col-md-6" style="padding: 10px;">
+						<div style="height: 70px; background-color: rgb(247,248,250); padding-top:18px; padding-left:10px">
+							<img src="images/Hepatitis.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span  style="color: rgb(99,109,209);"><b>HEPATITIS</b></span>
+						</div>
+					</div>
+					<div class=" col-md-6" style="padding: 10px;">
+						<div style="height: 70px; background-color: rgb(247,248,250);  padding-top:18px; padding-left:10px">
+							<img src="images/housing.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span  style="color: rgb(99,109,209);"><b>HOUSING SOCIETY</b></span>
+						</div>
+					</div>
+
+					<div class=" col-md-6" style="padding: 10px;">
+						<div style="height: 70px; background-color: rgb(247,248,250);  padding-top:18px; padding-left:10px">
+							<img src="images/IT.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span  style="color: rgb(99,109,209);"><b>IT LITERACY</b></span>
+						</div>
+					</div>
+					<div class=" col-md-6" style="padding: 10px;">
+						<div style="height: 70px; background-color: rgb(247,248,250);  padding-top:18px; padding-left:10px">
+							<img src="images/tharparkar.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<span  style="color: rgb(99,109,209);"><b>THARPARKAR</b></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class=" col-md-3">
+				<h3 style="color: rgb(49,109,195);"><b>UPCOMING EVENTS</b></h3>
+				<div><div style="border: solid 1px rgb(66,121,0); width:20%"></div></div>
+				<marquee behavior="scroll" direction="up"  scrollamount="1" style="height: 200px; color:rgb(154,154,155)">
+					Saylani Welfare Distributing Ration & Clothes to affected people of Balochistan. <a href="#" style="color: blue;">More Details</a>
+					<br><br>
+					PIAIC Entrance Exam Merit Ranking List Announced. <a href="#" style="color: blue;">More Details</a>
+					<br><br>
+					President of Pakistan (Dr. Arif Alvi) Visited Saylani Welfare International Trust HeadOffice Karachi. <a href="#" style="color: blue;">More</a>
+					<br><br>
+					Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani Welfare International Trust, Saylani Mass I.T. Training. <a href="#" style="color: blue;">More Details</a>
+				</marquee>
+			</div>
+		</div>
+
+
+		<br>
+		<br>
+		<div style="text-align: center; padding-top:40px">
+			<h1><span style="color: rgb(49,109,195);">IMAGE </span><span style="color: rgb(66,121,0);">GALLERY</span></h1>
+		</div>
+		<div style="text-align: center;">
+			<b><b style="color:rgb(66,121,0);">_____</b>	</b>	
+			<img src="https://www.saylaniwelfare.com/public_html/images/saylani/favicon.png" alt="" height="35px">
+			<b><b style="color:rgb(66,121,0);">_____</b></b> 
+		</div>
+<br>
+		<div class="row" style="margin-right:0; margin-left:0; text-align: center;">
+			<div class="offset-md-1  col-md-2">
+				<img src="images/rashan2.jpg" alt="" height="150px">
+			</div>
+			<div class=" col-md-2">
+				<img src="images/food.jpg" alt="" height="150px">
+			</div>
+			<div class=" col-md-2">
+				<img src="images/hazrat.jpg" alt="" height="150px">
+			</div>
+			<div class=" col-md-2">
+				<img src="images/rashan2 (1).jpg" alt="" height="150px"> 
+			</div>
+			<div class=" col-md-2">
+				<img src="images/hazrat2.jpg" alt="" height="150px">
+			</div>
+		</div>
+
+	</div>
+
+	<!--footer-->
+	<div style="font-family: 'Times New Roman', Times, serif; background-color:rgb(37,39,46); margin-right:0; margin-left:0;">
+		<div class="row" style="margin-right:0; margin-left:0; text-align: center;">
+			<div class="offset-md-1 col-md-3">
+				<br><br><br>
+				<p style="color:rgb(154,154,155); font-size: 16px">
+					Head Office,<br>
+					A-25, Bahadurabad Chowrangi Karachi, Pakistan
+					<br>
+					<div  style="padding-top: 1px; color:rgb(154,154,155); font-size: 16px">
+						<i class="fa fa-phone" style="color: green;"></i> UAN: 111-729-526 &nbsp;&nbsp;&nbsp;<i class="fa fa-globe" style="color: green;"></i> (+0092-213) 4130786-90 
+						<br>
+						<i class="fa fa-phone" style="color: green;"></i> CELL: 92-311-1729526 
+						<br>
+						<i class="fa fa-phone" style="color: green;"></i> USA NO +1(716)941 7792 
+						<br>
+						<i class="fa fa-phone" style="color: green;"></i> UK NO (+44)115 970 6256  
+						<br>
+						<i class="fa fa-envelope" style="color: green;"></i> info@saylaniwelfare.com
+					</div>
+				</p>
+			</div>
+			<div class=" col-md-3">
+				<br><br>
+				<h5 style="color: white;"><b>Useful Links</b></h5>
+				<div style="border: solid 1px green;";></div>
+			</div>
+			<div class=" col-md-3" style="text-align: center;">
+				<br><br>
+				<h5 style="color: white;"><b>Connect With Us</b></h5>
+				<br>
+				<a class="btn1" href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+				<a class="btn1" href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+				<a class="btn1" href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+				<a class="btn1" href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div style="background-color: rgb(49,109,195); text-align: center; height: 50px; padding-top:15px; margin-right:0; margin-left:0;">
+		<p style="color:white">Copyright <i class="fa fa-copyright"></i> 2020 Syed Noman</p>
+	</div>
+	
+</body>
+
+</html>
